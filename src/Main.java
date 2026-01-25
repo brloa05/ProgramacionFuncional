@@ -7,4 +7,11 @@ void main(String[] args) {
     List<Integer> acceptedNumbers = numeros.stream().filter(isPositiveAndEven).toList();
 
     acceptedNumbers.forEach(System.out:: println);
+
+    //Reto #2
+    List<String> palabras = List.of("Java", "Streams", "Lambda");
+
+    Function<String, Integer>  lengths = String::length;
+
+    palabras.stream().map(lengths).forEach(System.out::println);
 }
