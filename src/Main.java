@@ -24,5 +24,13 @@ void main(String[] args) {
 
     result.forEach(System.out::println);
 
+    //#Reto #4
+    List<Integer> nu = List.of(1, 2, 3, 4, 5, 6);
+
+    int r = nu.stream().filter(n -> n % 2 != 0).reduce(0, (a,b) -> a + b);
+
+    System.out.println("resultado es:" + r);
+
+
 
 }
