@@ -1,16 +1,10 @@
-
-
-
-
-
-
-void main() {
+void main(String[] args) {
     //Reto #1
     List<Integer> numeros = List.of(-3, -2, 0, 1, 2, 4, 7, 8);
 
-    Predicate<Integer> IsPositiveAndPar = n ->  n > 0 && n % 2 == 0;
+    Predicate<Integer> isPositiveAndEven = n ->  n > 0 && n % 2 == 0;
 
-    List<Integer> numbersAccept = numeros.stream().filter(IsPositiveAndPar).toList();
+    List<Integer> acceptedNumbers = numeros.stream().filter(isPositiveAndEven).toList();
 
-    numbersAccept.forEach(System.out:: println);
+    acceptedNumbers.forEach(System.out:: println);
 }
