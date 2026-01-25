@@ -14,4 +14,15 @@ void main(String[] args) {
     Function<String, Integer>  lengths = String::length;
 
     palabras.stream().map(lengths).forEach(System.out::println);
+    //Reto #3
+
+    List<Integer> numbers = List.of(3, 7, 10, 12, 15);
+
+
+
+    List<Integer> result = numbers.stream().filter(n -> n > 10).map(n -> (int) Math.pow(n,2)).toList();
+
+    result.forEach(System.out::println);
+
+
 }
